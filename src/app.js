@@ -1,11 +1,28 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+window.onload = () => {
+  document.querySelector("#excuse").innerHTML = excuseGenerator();
+};
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+const excuseGenerator = () => {
+  let who = ["The cat", "My little brother", "His monkey", "My hamster"];
+  let action = ["ate", "lost", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car", "my backpack"];
+  let when = [
+    "before the class",
+    "right on time",
+    "when I finished the homework",
+    "during my lunch"
+  ];
+  let auxWho = Math.floor(Math.random() * 4);
+  let auxAction = Math.floor(Math.random() * 4);
+  let auxWhat = Math.floor(Math.random() * 4);
+  let auxWhen = Math.floor(Math.random() * 4);
+  return (
+    who[auxWho] +
+    " " +
+    action[auxAction] +
+    " " +
+    what[auxWhat] +
+    " " +
+    when[auxWhen]
+  );
 };

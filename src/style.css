@@ -1,1 +1,8 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+.excuseContainer{
+    text-align: center;
+    
+}
+#excuse{
+    font-size: larger;
+
+}
